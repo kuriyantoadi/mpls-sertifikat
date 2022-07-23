@@ -8,18 +8,12 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('M_login');
-        $this->load->model('M_siswa');
+        // $this->load->model('M_siswa');
     }
 
     public function index()
     {
-        $this->load->view('login_tekno');
-    }
-
-    //Login Siswa Tekno Awal
-    public function siswa_tekno()
-    {
-        $this->load->view('login_tekno');
+        $this->load->view('siswa/login');
     }
 
     public function login_tekno()
