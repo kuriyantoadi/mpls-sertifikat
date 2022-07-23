@@ -16,12 +16,12 @@ class Login extends CI_Controller
         $this->load->view('siswa/login');
     }
 
-    public function login_tekno()
+    public function login_siswa()
     {
-        $nisn_siswa = htmlspecialchars($this->input->post('nisn_siswa', true), ENT_QUOTES);
-        $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
+        $nisn = htmlspecialchars($this->input->post('nisn', true), ENT_QUOTES);
+        $nik = htmlspecialchars($this->input->post('nik', true), ENT_QUOTES);
 
-        $cek_login = $this->M_login->login_tekno($nisn_siswa, $password);
+        $cek_login = $this->M_login->login_siswa($nisn, $nik);
 
         if ($cek_login->num_rows() > 0) {
             $data = $cek_login->row_array();
@@ -29,24 +29,21 @@ class Login extends CI_Controller
             if ($data['status'] == 'siswa') {
                 $this->session->set_userdata('siswa', true);
                 $this->session->set_userdata('ses_id', $data['id_siswa']);
-                $this->session->set_userdata('ses_nisn', $data['nisn_siswa']);
-                redirect('C_siswa/dashboard_tekno');
+                $this->session->set_userdata('ses_nisn', $data['nisn']);
 
-                // }elseif ($data['status']=='pimpinan') {
-                //   $this->session->set_userdata('pimpinan', true);
-                //   $this->session->set_userdata('ses_id', $data['id_user']);
-                //   $this->session->set_userdata('ses_username', $data['nisn_siswa']);
-                //
-                //   redirect('C_pimpinan/dashboard');
+                // redirect('Siswa');
+                echo "test'";
+
+               
             } else {
-                $url = base_url('C_login/siswa_tekno');
+                $url = base_url('Login1');
                 echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
           NISN atau Password Salah<br> Silahkan Login Kembali
         </div>
         ');
-                redirect($url);
+                // redirect($url);
             }
         }
 
@@ -55,8 +52,8 @@ class Login extends CI_Controller
       NISN atau Password Salah<br> Silahkan Login Kembali
     </div>
     ');
-        $url = base_url('C_login/siswa_tekno');
-        redirect($url);
+        // $url = base_url('C_login/siswa_tekno');
+        // redirect($url);
     }
     //Login Siswa Tekno Akhir
 

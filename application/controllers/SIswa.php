@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class C_siswa extends CI_Controller
+class Siswa extends CI_Controller
 {
 
     public function __construct()
@@ -12,15 +12,16 @@ class C_siswa extends CI_Controller
 
         // session login
         if ($this->session->userdata('siswa') != true) {
-            $url = base_url('C_login');
-            redirect($url);
+            $url = base_url('Login');
+            // redirect($url);
         }
     }
 
     //Login User
     public function index()
     {
-        $this->load->view('login_tekno');
+        // $this->load->view('siswa/dashboard');
+        echo 'test';
     }
 
     //Login Tekno

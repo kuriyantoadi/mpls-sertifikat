@@ -26,18 +26,21 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
                         <!-- <h3 class="mb-4 text-center">Have an account?</h3> -->
-                        <form action="#" class="signin-form">
+                        <?= form_open('Login/login_siswa'); ?>
+                        <form class="signin-form">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="NISN" required>
+                                <input type="text" class="form-control" placeholder="NISN" name='nisn' required>
                             </div>
                             <div class="form-group">
-                                <input id="password-field" type="password" class="form-control" placeholder="NIK" required>
+                                <input id="password-field" type="text" class="form-control" placeholder="NIK" name="nik" required>
                                 <!-- <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> -->
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="form-control btn btn-primary submit px-3" value="Login">
-                            </div> 
+                            </div>
                             <!-- <div style="margin-top: 100px;"></div> -->
+                            <?= form_close() ?>
+
                         </form>
                     </div>
                 </div>
