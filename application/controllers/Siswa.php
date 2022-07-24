@@ -39,6 +39,14 @@ class Siswa extends CI_Controller
         $this->load->view('template/footer');
     }
 
+    public function sertifikat()
+    {
+        $ses_id = $this->session->userdata('ses_id');
+        $data['tampil'] = $this->M_siswa->data_siswa($ses_id);
+
+        $this->load->view('siswa/sertifikat', $data);
+    }
+
     //Login Tekno
     public function dashboard_tekno()
     {

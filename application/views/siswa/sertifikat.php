@@ -7,6 +7,10 @@
     <title>Sertifikat MPLS</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <style>
         .img{
@@ -30,12 +34,31 @@
             color: #1A5076;
             text-transform: capitalize;
         }
+
+        .text-enk{
+            position: absolute;
+            bottom: 3%;
+            right: 40%;
+            transform: translate(-50%, -81%);
+            font-family: 'Roboto', sans-serif;
+            font-size: 1vw;
+            font-weight: bold;
+            /* color: #1A5076; */
+            text-transform: capitalize;
+        }
     </style>
 </head>
 <body>
+    <?php foreach ($tampil as $row) { ?>
+
     <div class="container">
-        <img src="sertifikat.jpeg" alt="Sertifikat MPLS" class="img">
-        <p class="text">nama siswa</p>
+        <img src="<?= base_url() ?>assets/sertifikat.jpeg" alt="Sertifikat MPLS" class="img">
+        <p class="text"><?= $row->nama_siswa ?></p>
+
+        <p class="text-enk">kode enkripsi : <?= md5($row->nama_siswa) ?></p>
     </div>
+
+    <?php } ?>
+
 </body>
 </html>
