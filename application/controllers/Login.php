@@ -31,8 +31,8 @@ class Login extends CI_Controller
                 $this->session->set_userdata('ses_id', $data['id_siswa']);
                 $this->session->set_userdata('ses_nisn', $data['nisn']);
 
-                // redirect('Siswa');
-                echo "test'";
+                redirect('Siswa');
+                // echo "test'";
 
                
             } else {
@@ -157,7 +157,7 @@ class Login extends CI_Controller
     {
         $this->session->sess_destroy();
         $url = base_url();
-        redirect('C_siswa');
+        redirect('Login/index');
     }
 
     public function admin_logout()
