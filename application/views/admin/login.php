@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Cetak Sertifikat MPLS 2022</h2>
+                    <h2 class="heading-section">Admin Sertifikat MPLS 2022</h2>
                     <p style="color: white;">SMK Negeri 1 Kragilan</p>
 
                 </div>
@@ -30,13 +30,13 @@
                         <!-- <h3 class="mb-4 text-center">Have an account?</h3> -->
                         <?= $this->session->flashdata('msg') ?>
 
-                        <?= form_open('Login/login_siswa'); ?>
+                        <?= form_open('Login/login_admin'); ?>
                         <form class="signin-form">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="NISN" name='nisn' required>
+                                <input type="text" class="form-control" placeholder="Username" name='username' required>
                             </div>
                             <div class="form-group">
-                                <input id="password-field" type="text" class="form-control" placeholder="NIK" name="nik" required>
+                                <input id="password-field" type="password" class="form-control" placeholder="Password" name="password" required>
                                 <!-- <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> -->
                             </div>
                             <div class="form-group">

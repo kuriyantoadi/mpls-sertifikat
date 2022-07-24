@@ -10,26 +10,50 @@ class Admin extends CI_Controller
         $this->load->model('M_admin');
 
         // session login
-        if ($this->session->userdata('aktif') != true) {
-            $url = base_url('C_login/f');
-            redirect($url);
+        if ($this->session->userdata('admin') != true) {
+            // $url = base_url('Admin/f');
+            // redirect($url);
         }
     }
 
-    public function index()
+    // public function index()
+    // {
+    //     $this->load->view('Admin/login');
+    // }
+
+    public function f()
     {
-        $this->load->view('Admin/f');
+        // $this->load->view('Admin/login');
+        echo "cetak";
+    }
+
+    public function dashboard()
+    {
+        $this->load->view('template/header-admin');
+        $this->load->view('admin/dashboard');
+        $this->load->view('template/footer');
+    }
+
+    public function siswa()
+    {
+        $data['tampil_siswa'] = $this->M_admin->tampil_siswa();
+
+        $this->load->view('template/header-admin');
+        $this->load->view('admin/siswa', $data);
+        $this->load->view('template/footer');
     }
 
 
     // tekno awal
-    public function siswa_tekno()
+    public function siswa_detail($id_siswa)
     {
-        // $ses_id_umkm = $this->session->userdata('ses_id');
-        $data['tampil'] = $this->M_admin->siswa_tekno();
+        $data['tampil_siswa'] = $this->M_admin->siswa_detail($id_siswa);
+
         $this->load->view('template/header-admin');
-        $this->load->view('admin/siswa_tekno', $data);
+        $this->load->view('admin/siswa_detail', $data);
+        $this->load->view('template/footer');
     }
+
 
     public function siswa_hapus_tekno($id_siswa)
     {

@@ -51,6 +51,18 @@
 <!-- Custom scripts for all pages-->
 <script src="<?= base_url() ?>assets/sbadmin/js/sb-admin-2.min.js"></script>
 
+<!-- data table -->
+<script src="<?= base_url() ?>assets/dataTable/jquery.js"></script>
+<script src="<?= base_url() ?>assets/dataTable/jquery.dataTables.min.js"></script>
+<script src="<?= base_url() ?>assets/dataTable/dataTables.bootstrap4.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#tabel_js').DataTable();
+    });
+</script>
+
 </body>
 
 </html>

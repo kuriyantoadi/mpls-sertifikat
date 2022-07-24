@@ -2,16 +2,14 @@
 
 class M_admin extends CI_Model{
 
-  function dashboard($ses_id){
+  function siswa_detail($ses_id){
     $this->db->where('id_siswa', $ses_id);
     $hasil = $this->db->get('tb_siswa')->result();
     return $hasil;
   }
 
-
-//tekno
-  function siswa_tekno(){
-    $tampil = $this->db->get('tb_siswa_tekno')->result();
+  function tampil_siswa(){
+    $tampil = $this->db->get('tb_siswa')->result();
     return $tampil;
   }
 
