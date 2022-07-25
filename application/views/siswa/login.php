@@ -41,7 +41,37 @@
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="form-control btn btn-primary submit px-3" value="Login">
-                                <button style="margin-top: 20px;" onclick="js_block1()" class="form-control btn btn-success px-3">Info Login</button>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="form-control btn btn-success px-3" data-toggle="modal" data-target="#exampleModal">
+                                    Informasi Login
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Informasi Login</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p style="color: black;">
+                                                    Silahkan login dengan ketentuan berikut :
+                                                <ul style="color: black;">
+                                                    <li>Login menggunakan NISN masing-masing siswa.</li>
+                                                    <li>Password menggunakan 4 digit angka NISN dari belakang, contoh NISN 12345678 maka password 5678</li>
+                                                    <li>Jika masih gagal bisa hubungi <a href="https://wa.link/edpv3y" class="btn btn-sm btn-primary">Bantuan</a></li>
+                                                </ul>
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
 
