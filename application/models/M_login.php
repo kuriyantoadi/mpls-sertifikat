@@ -3,8 +3,8 @@
 class M_login extends CI_Model{
 
   //tampil buku
-  function login_siswa($nisn, $nik){
-    $login = $this->db->query("SELECT * from tb_siswa where nisn='$nisn' AND nik='$nik' ");
+  function login_siswa($nisn, $password){
+    $login = $this->db->query("SELECT * from tb_siswa where nisn='$nisn' AND password='$password' ");
     return $login;
   }
 
