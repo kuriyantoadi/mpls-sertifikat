@@ -41,6 +41,20 @@
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="form-control btn btn-primary submit px-3" value="Login">
+                                <button style="margin-top: 20px;" onclick="js_block1()" class="form-control btn btn-success px-3">Info Login</button>
+                            </div>
+
+
+                            <div id="block1" style="display:none;">
+                                <div class="card">
+
+                                    <div class="card-body">
+                                        <p style="color: black;">Login menggunakan NISN dan Passowrd 4 angka digit NISN dari belakang.
+                                            <br>Contoh NISN 12345678 maka password 5678.
+                                            <br>Jika masih gagal bisa hubungi <a href="https://wa.link/edpv3y" class="btn btn-primary">Bantuan</a>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <!-- <div style="margin-top: 100px;"></div> -->
                             <?= form_close() ?>
@@ -56,6 +70,17 @@
     <script src="<?= base_url() ?>assets/login/js/popper.js"></script>
     <script src="<?= base_url() ?>assets/login/js/bootstrap.min.js"></script>
     <script src="<?= base_url() ?>assets/login/js/main.js"></script>
+
+    <script>
+        function js_block1() {
+            var x = document.getElementById("block1");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 

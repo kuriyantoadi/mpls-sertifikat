@@ -10,27 +10,27 @@
                 <h6 class="m-0 font-weight-bold text-primary">Detail Data Siswa</h6>
             </div>
             <div class="card-body">
-                <table>
+                <?= $this->session->flashdata('msg') ?>
+
+                <a href="<?= base_url() ?>Admin/siswa/" class="btn btn-danger btn-sm">Kembali</a>
+                <a href="<?= base_url() ?>Admin/sertifikat_cetak/<?= $row->id_siswa ?>" class="btn btn-secondary btn-sm">Cetak</a>
+                <table style="margin-top: 20px;" class="table table-bordered">
                     <tr>
-                        <td>Nama Siswa</td>
-                        <td>: <?= $row->nama_siswa ?></td>
+                        <td width="250px">Nama Siswa :</td>
+                        <td> <?= $row->nama_siswa ?></td>
                     </tr>
                     <tr>
-                        <td>Kelas</td>
-                        <td>: <?= $row->kelas ?></td>
+                        <td>Kelas :</td>
+                        <td><?= $row->kelas ?></td>
                     </tr>
                     <tr>
-                        <td>NISN</td>
-                        <td>: <?= $row->nisn ?></td>
+                        <td>NISN :</td>
+                        <td><?= $row->nisn ?></td>
                     </tr>
+
                     <tr>
-                        <td>NIK</td>
-                        <td>: <?= $row->nik ?></td>
-                    </tr>
-                   
-                    <tr>
-                        <td>Kondisi MPLS</td>
-                        <td>: <?= $row->kondisi_mpls ?></td>
+                        <td>Kondisi MPLS :</td>
+                        <td><?= $row->kondisi_mpls ?></td>
                     </tr>
 
                 </table>
@@ -46,33 +46,37 @@
             <!-- Card Content - Collapse -->
             <div class="collapse show" id="collapseCardExample">
                 <div class="card-body">
-                    <table>
+                    <?= form_open('Admin/siswa_edit_up') ?>
+                    <table class="table table-bordered">
                         <tr>
-                            <td>Nama Siswa</td>
-                            <td>: <input type="text" class="form-control"></td>
+                            <td>Nama Siswa :</td>
+                            <td>
+                                <input type="hidden" name="id_siswa" value="<?= $row->id_siswa ?>">
+                                <input type="text" class="form-control" name="nama_siswa" value="<?= $row->nama_siswa ?>">
+                            </td>
                         </tr>
                         <tr>
                             <td>Kelas</td>
-                            <td>: </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>NISN</td>
-                            <td>: </td>
-                        </tr>
-                        <tr>
-                            <td>NIK</td>
-                            <td>: </td>
-                        </tr>
-                        <tr>
-                            <td>No HP</td>
-                            <td>: </td>
-                        </tr>
-                        <tr>
-                            <td>Kondisi MPLS</td>
-                            <td>: </td>
+                            <td><input type="text" class="form-control" name="nisn" value="<?= $row->nisn ?>"></td>
                         </tr>
 
+                        <tr>
+                            <td>Kondisi MPLS</td>
+                            <td>
+                                <select name="kondisi_mpls" id="" class="form-control">
+                                    <option value="<?= $row->kondisi_mpls ?>">Kondisi awal | <?= $row->kondisi_mpls ?></option>
+                                    <option value="selesai">Selesai</option>
+                                    <option value="belum selesai">Belum Selesai</option>
+                                </select>
+                            </td>
+                        </tr>
                     </table>
+                    <input style="display: block; margin-left: auto; margin-right: auto;" type="submit" value="simpan" class="btn btn-primary">
+                    <?= form_close() ?>
                 </div>
             </div>
         </div>

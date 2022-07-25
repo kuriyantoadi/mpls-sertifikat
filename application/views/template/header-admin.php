@@ -59,16 +59,6 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="<?= base_url() ?>Siswa/bantuan" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-comment"></i>
-                    <span>Bantuan Cetak Sertifikat</span>
-                </a>
-
-            </li>
-
-
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>

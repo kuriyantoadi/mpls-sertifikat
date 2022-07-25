@@ -13,6 +13,19 @@ class M_admin extends CI_Model{
     return $tampil;
   }
 
+  function siswa_edit_up($data_edit, $kode_siswa)
+  {
+    $this->db->where($kode_siswa);
+    $this->db->update('tb_siswa', $data_edit);
+  }
+
+  function sertifikat_cetak($id_siswa)
+  {
+    $this->db->where('id_siswa', $id_siswa);
+    $hasil = $this->db->get('tb_siswa')->result();
+    return $hasil;
+  }
+
 
   public function siswa_hapus_tekno($id_siswa)
   {
@@ -33,10 +46,7 @@ class M_admin extends CI_Model{
     return $hasil;
   }
 
-  function siswa_edit_up_tekno($data_edit, $kode_siswa){
-    $this->db->where($kode_siswa);
-    $this->db->update('tb_siswa_tekno',$data_edit);
-  }
+  
 
   public function siswa_print_tekno($id_siswa)
   {

@@ -111,7 +111,6 @@ class Login extends CI_Controller
     public function admin_logout()
     {
         $this->session->sess_destroy();
-        $url = base_url();
         redirect('Login/fa');
     }
 }

@@ -43,19 +43,14 @@
                         <td>
                             <center>
                                 <?php if ($row->kondisi_mpls == "selesai") { ?>
-                                    <a href="#" class="btn btn-success btn-circle btn-sm">
-                                        <i class="fas fa-check"></i>
-                                    </a>
+                                    <btn href="#" class="badge badge-success">Selesai</btn>
                                 <?php } else { ?>
-                                    <a href="#" class="btn btn-danger btn-circle btn-sm">
-                                        <i class="fas fa-exclamation-triangle"></i>
-                                    </a>
+                                    <btn href="#" class="badge badge-danger">Tidak Selesai</btn>
                                 <?php } ?>
                         </td>
                         <td align="center">
-                            <a href="<?= base_url() ?>Admin/siswa_edit" class="btn btn-info btn-sm">Edit</a>
                             <a href="<?= base_url() ?>Admin/siswa_detail/<?= $row->id_siswa ?>" class="btn btn-primary btn-sm">Detail</a>
-                            <a href="<?= base_url() ?>Admin/siswa_edit" class="btn btn-secondary btn-sm">Cetak</a>
+                            <a href="<?= base_url() ?>Admin/sertifikat_cetak/<?= $row->id_siswa ?>" class="btn btn-secondary btn-sm">Cetak</a>
                         </td>
                     </tr>
                 </tbody>
