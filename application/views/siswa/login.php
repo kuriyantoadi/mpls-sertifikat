@@ -36,7 +36,7 @@
                                 <input type="text" class="form-control" placeholder="NISN" name='nisn' required>
                             </div>
                             <div class="form-group">
-                                <input id="password-field" type="text" class="form-control" placeholder="NIK" name="nik" required>
+                                <input id="password-field" type="text" class="form-control" placeholder="Password" name="password" required>
                                 <!-- <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> -->
                             </div>
                             <div class="form-group">

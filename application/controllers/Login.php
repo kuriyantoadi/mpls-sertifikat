@@ -19,9 +19,9 @@ class Login extends CI_Controller
     public function login_siswa()
     {
         $nisn = htmlspecialchars($this->input->post('nisn', true), ENT_QUOTES);
-        $nik = htmlspecialchars($this->input->post('nik', true), ENT_QUOTES);
+        $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
 
-        $cek_login = $this->M_login->login_siswa($nisn, $nik);
+        $cek_login = $this->M_login->login_siswa($nisn, $password);
 
         if ($cek_login->num_rows() > 0) {
             $data = $cek_login->row_array();
