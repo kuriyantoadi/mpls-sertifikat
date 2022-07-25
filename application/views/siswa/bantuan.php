@@ -10,7 +10,7 @@
         <b>
             Informasi lebih lanjut bisa hubungi kak Nisa kelas XII TKJ 2.
         </b>
-        <a href="https://wa.link/buo1h7" class="btn btn-success btn-sm">Bantu Cetak Sertifikat</a>
+        <br><a href="https://wa.link/buo1h7" class="btn btn-success btn-sm">Bantu Cetak Sertifikat</a>
 
 
     </div>
