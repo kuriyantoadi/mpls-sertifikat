@@ -57,7 +57,27 @@
                         </tr>
                         <tr>
                             <td>Kelas</td>
-                            <td><input type="text" class="form-control"></td>
+                            <td>
+                                <select name="kelas" id="" class="form-control">
+                                    <option value="<?= $row->kelas ?>">Kondisi awal | <?= $row->kelas ?></option>
+                                    <option value="X AKL 1">X AKL 1</option>
+                                    <option value="X AKL 2">X AKL 2</option>
+                                    <option value="X OTKP 1">X OTKP 1</option>
+                                    <option value="X OTKP 2">X OTKP 2</option>
+                                    <option value="X TKJ 1">X TKJ 1</option>
+                                    <option value="X TKJ 2">X TKJ 2</option>
+                                    <option value="X RPL 1">X RPL 1</option>
+                                    <option value="X RPL 2">X RPL 2</option>
+                                    <option value="X TKR 1">X TKR 1</option>
+                                    <option value="X TKR 2">X TKR 2</option>
+                                    <option value="X TPM 1">X TPM 1</option>
+                                    <option value="X TPM 2">X TPM 2</option>
+                                    <option value="X TPM 3">X TPM 3</option>
+                                    <option value="X TPM 4">X TPM 4</option>
+
+
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td>NISN</td>

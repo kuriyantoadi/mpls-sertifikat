@@ -12,6 +12,6 @@
         </b>
         <br><a href="https://wa.link/buo1h7" class="btn btn-success btn-sm">Bantu Cetak Sertifikat</a>
 
-
+    
     </div>
     <!-- /.container-fluid -->
