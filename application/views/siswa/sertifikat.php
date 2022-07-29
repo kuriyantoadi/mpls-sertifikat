@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,23 @@
     <title>Sertifikat MPLS</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <style>
-        .img{
+        .img {
             width: 100%;
             height: auto;
         }
-        
-        .container{
+
+        .container {
             position: relative;
             width: 95%;
         }
 
-        .text{
+        .text {
             position: absolute;
             top: 20%;
             left: 50%;
@@ -32,10 +33,11 @@
             font-size: 8vw;
             font-weight: bold;
             color: #1A5076;
-            text-transform: capitalize;
+            text-transform: capitalize !important;
+            white-space: nowrap;
         }
 
-        .text-enk{
+        .text-enk {
             position: absolute;
             bottom: 3%;
             right: 40%;
@@ -48,17 +50,19 @@
         }
     </style>
 </head>
+
 <body>
     <?php foreach ($tampil as $row) { ?>
 
-    <div class="container">
-        <img src="<?= base_url() ?>assets/sertifikat.jpeg" alt="Sertifikat MPLS" class="img">
-        <p class="text"><?= $row->nama_siswa ?></p>
+        <div class="container">
+            <img src="<?= base_url() ?>assets/sertifikat.jpeg" alt="Sertifikat MPLS" class="img">
+            <p class="text"><?= $row->nama_siswa ?></p>
 
-        <p class="text-enk">kode enkripsi : <?= md5($row->nama_siswa) ?></p>
-    </div>
+            <p class="text-enk">kode enkripsi : <?= md5($row->nama_siswa) ?></p>
+        </div>
 
     <?php } ?>
 
 </body>
+
 </html>
