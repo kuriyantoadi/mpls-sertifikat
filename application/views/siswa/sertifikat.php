@@ -26,11 +26,11 @@
 
         .text {
             position: absolute;
-            top: 20%;
+            top: 23%;
             left: 50%;
             transform: translate(-50%, -81%);
             font-family: Tangerine, sans-serif;
-            font-size: 8vw;
+            font-size: 5vw;
             font-weight: bold;
             color: #1A5076;
             text-transform: capitalize !important;

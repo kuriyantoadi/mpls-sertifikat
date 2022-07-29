@@ -13,8 +13,11 @@
             <li>Hilangkan opsi header dan footer saat melakukan print, ini akan membuat tulisan link cetak akan hilang secara otomatis</li>
             <li>Jika tidak muncul kontak print dihalaman print, silahkan tekan <b>Ctrl + P</b>.</li>
             <li>Gunakan kertas ukuran A4 dengan jenis kelas concorde berat 210 gram</li>
+            <li>Jika nama disertifikat terlalu panjang bisa hubungi kontak bantuan untuk menyesuaikan nama disertifikat yang akan dicetak.</li>
+
         </ul>
         <a href="<?= base_url() ?>Siswa/sertifikat" class="btn btn-primary">Cetak Sertifikat</a>
+        <a href="http://wa.link/ca4dcl" class="btn btn-info">Bantuan</a>
 
     </div>
     <!-- /.container-fluid -->
