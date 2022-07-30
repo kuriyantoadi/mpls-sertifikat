@@ -19,7 +19,7 @@
 
         <?php 
         foreach ($tampil as $row) {
-        if($row->kondisi == 'selesai'){ ?>
+        if($row->kondisi_mpls == 'selesai'){ ?>
             <a href="<?= base_url() ?>Siswa/sertifikat" class="btn btn-primary">Cetak Sertifikat</a>
         <?php }else{ ?>
             Mohon maaf anda tidak mengikuti MPLS 3 hari.
