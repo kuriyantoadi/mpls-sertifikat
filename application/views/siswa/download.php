@@ -19,24 +19,27 @@
 
         <?php
         foreach ($tampil as $row) {
-            if ($row->kondisi_mpls == 'selesai') { ?>
+        ?>
 
-                <table class="table table-bordered">
-                    <tr>
-                        <td>Nama : </td>
-                        <td><?= $row->nama_siswa ?></td>
-                    </tr>
-                    <tr>
-                        <td>Status MPLS :</td>
-                        <td><?= $row->kondisi_mpls ?></td>
-                    </tr>
+            <table class="table table-bordered">
+                <tr>
+                    <td>Nama : </td>
+                    <td><?= $row->nama_siswa ?></td>
+                </tr>
+                <tr>
+                    <td>Status MPLS :</td>
+                    <td><?= $row->kondisi_mpls ?></td>
+                </tr>
 
-                </table>
+            </table>
+
+            <?php if ($row->kondisi_mpls == 'selesai') { ?>
 
                 <a href="<?= base_url() ?>Siswa/sertifikat" class="btn btn-primary">Cetak Sertifikat</a>
                 <a href="http://wa.link/ca4dcl" class="btn btn-info">Bantuan</a>
 
             <?php } else { ?>
+
                 Mohon maaf anda tidak mengikuti MPLS 3 hari, sertifikat tidak dapat ditampilkan
         <?php
             }
