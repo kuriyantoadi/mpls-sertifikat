@@ -16,7 +16,18 @@
             <li>Jika nama disertifikat terlalu panjang bisa hubungi kontak bantuan untuk menyesuaikan nama disertifikat yang akan dicetak.</li>
 
         </ul>
-        <a href="<?= base_url() ?>Siswa/sertifikat" class="btn btn-primary">Cetak Sertifikat</a>
+
+        <?php 
+        foreach ($tampil as $row) {
+        if($row->kondisi == 'selesai'){ ?>
+            <a href="<?= base_url() ?>Siswa/sertifikat" class="btn btn-primary">Cetak Sertifikat</a>
+        <?php }else{ ?>
+            Mohon maaf anda tidak mengikuti MPLS 3 hari.
+        <?php  
+            } 
+        }
+        ?>
+
         <a href="http://wa.link/ca4dcl" class="btn btn-info">Bantuan</a>
 
     </div>

@@ -34,8 +34,11 @@ class Siswa extends CI_Controller
 
     public function bantuan()
     {
+        $ses_id = $this->session->userdata('ses_id');
+        $data['tampil'] = $this->M_siswa->data_siswa($ses_id);
+
         $this->load->view('template/header-siswa');
-        $this->load->view('siswa/bantuan');
+        $this->load->view('siswa/bantuan', $data);
         $this->load->view('template/footer');
     }
 
