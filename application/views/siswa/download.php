@@ -34,14 +34,15 @@
                 </table>
 
                 <a href="<?= base_url() ?>Siswa/sertifikat" class="btn btn-primary">Cetak Sertifikat</a>
+                <a href="http://wa.link/ca4dcl" class="btn btn-info">Bantuan</a>
+
             <?php } else { ?>
-                Mohon maaf anda tidak mengikuti MPLS 3 hari.
+                Mohon maaf anda tidak mengikuti MPLS 3 hari, sertifikat tidak dapat ditampilkan
         <?php
             }
         }
         ?>
 
-        <a href="http://wa.link/ca4dcl" class="btn btn-info">Bantuan</a>
 
     </div>
     <!-- /.container-fluid -->
